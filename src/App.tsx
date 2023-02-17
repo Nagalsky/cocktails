@@ -31,6 +31,8 @@ const App: FC = () => {
     }
   }
 
+  console.log('cocktails', cocktails)
+
   return (
     <section className="py-14">
       <div className="container">
@@ -85,7 +87,7 @@ const App: FC = () => {
                       {cocktail.name}
                     </h4>
                     <p className="mb-2">ingredients:</p>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="mb-5 flex flex-wrap gap-3">
                       {cocktail.ingredients.map((ingredient, index) => {
                         return (
                           <span
@@ -97,6 +99,11 @@ const App: FC = () => {
                         )
                       })}
                     </div>
+
+                    <p>
+                      <span className="font-bold">Instructions</span>:{' '}
+                      {cocktail.instructions}
+                    </p>
                   </div>
                 )
               })
